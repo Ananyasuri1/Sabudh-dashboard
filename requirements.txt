@@ -1,3 +1,6 @@
 flask
 json
 requests
+pandas
+plotly
+plotly.express

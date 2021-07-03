@@ -1,8 +1,14 @@
 // Set new default font family and font color to mimic Bootstrap's default styling
 Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
 Chart.defaults.global.defaultFontColor = '#292b2c';
-d3.csv('static/IN0008B.csv')
-  .then(makeChart);
+
+var csv_file = "static/csv/IN0666B.csv"
+function load_csv(parm1) {
+str1 = "static/csv/",
+csv_file1 = str1 + district[String(parm1)];
+} 
+d3.csv(csv_file)
+.then(makeChart);
 // Area Chart Example
 function makeChart(weather) {
     var weatherdate = weather.map(function(d) {return d.date});
